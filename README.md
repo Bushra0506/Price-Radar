@@ -10,6 +10,7 @@
 ## How to Run
 
 ### Prerequisites
+
 - Java JDK
 - MySQL Server
 - MySQL Connector/J
@@ -18,25 +19,27 @@
 ### Setup Instructions
 
 1. Clone or download this repository.
-2. Create the MySQL database named `priceradar_db`.
-3. Configure your local MySQL username and password in `DBConnection.java`. Do not upload your actual database password.
-4. Ensure the MySQL Connector JAR is available in the `lib` folder.
-5. Open the project folder in the terminal.
-6. Compile the Java files:
+2. Create the MySQL database named `priceradar_db` and create the required tables.
+3. Configure your local MySQL username and password in `DBConnection.java`. Keep your actual database password private and never commit it to GitHub.
+4. Make sure `mysql-connector-j-26.10.0.jar` is in the project root folder (the same folder as the Java files).
+5. Open the repository folder in the terminal.
+6. Compile the Java files (Windows PowerShell):
 
-```bash
-javac -cp ".;lib/mysql-connector-j-26.10.0.jar" src/*.java
+```powershell
+javac -cp ".;mysql-connector-j-26.10.0.jar" *.java
 ```
 
 7. Run the application:
 
-```bash
-java -cp ".;src;lib/mysql-connector-j-26.10.0.jar" Main
+```powershell
+java -cp ".;mysql-connector-j-26.10.0.jar" Main
 ```
+
+> The commands above match the current GitHub repository layout, where the Java files and Connector/J JAR are in the root folder.
 
 ## Features That Work
 
-1. **Add Products:** Add products and compare prices from three sellers: Amazon, Flipkart and Croma.
+1. **Add Products:** Add products and compare prices from three or more sellers.
 2. **Price Comparison:** Compare product prices, delivery charges and total prices to identify the cheapest seller.
 3. **Price History:** Store and view historical prices with timestamps and identify the lowest recorded price.
 4. **Target Price Alerts:** Set a target price and receive an alert when the current total price reaches or falls below it.
@@ -73,4 +76,3 @@ Croma        1100.00     0.00           1100.00
 Cheapest Seller: Amazon
 Best Total Price: Rs. 950.0
 ```
-
