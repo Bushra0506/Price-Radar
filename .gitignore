@@ -1,0 +1,22 @@
+# Java compiled files
+*.class
+
+# Build output
+/bin/
+/out/
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Local secrets and configuration
+.env
+.env.*
+config.properties
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
