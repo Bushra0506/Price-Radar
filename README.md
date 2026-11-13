@@ -39,7 +39,7 @@ java -cp ".;mysql-connector-j-26.10.0.jar" Main
 
 ## Features That Work
 
-1. **Add Products:** Add products and compare prices from three or more sellers.
+1. **Add Products:** Add products with exactly three sellers.
 2. **Price Comparison:** Compare product prices, delivery charges and total prices to identify the cheapest seller.
 3. **Price History:** Store and view historical prices with timestamps and identify the lowest recorded price.
 4. **Target Price Alerts:** Set a target price and receive an alert when the current total price reaches or falls below it.
