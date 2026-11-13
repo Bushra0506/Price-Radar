@@ -16,20 +16,28 @@
 - MySQL Connector/J
 - VS Code or any Java IDE
 
-### Setup Instructions
+### Database Setup
+
+1. Open MySQL Workbench and connect to your local MySQL server.
+2. Open the `database.sql` file included in this repository.
+3. Execute the script using the lightning-bolt button.
+4. The script creates the `priceradar_db` database and its four required tables: `products`, `sellers`, `price_history` and `target_alerts`.
+
+> The script creates tables only if they do not already exist. It does not insert the sample product catalogue or delete existing records.
+
+### Application Setup
 
 1. Clone or download this repository.
-2. Create the MySQL database named `priceradar_db` and create the required tables.
-3. Configure your local MySQL username and password in `DBConnection.java`. Keep your actual database password private and never commit it to GitHub.
-4. Make sure `mysql-connector-j-26.10.0.jar` is in the project root folder (the same folder as the Java files).
-5. Open the repository folder in the terminal.
-6. Compile the Java files (Windows PowerShell):
+2. Configure your local MySQL username and password in `DBConnection.java`. Keep your actual database password private and never commit it to GitHub.
+3. Make sure `mysql-connector-j-26.10.0.jar` is in the project root folder (the same folder as the Java files).
+4. Open the repository folder in the terminal.
+5. Compile the Java files (Windows PowerShell):
 
 ```powershell
 javac -cp ".;mysql-connector-j-26.10.0.jar" *.java
 ```
 
-7. Run the application:
+6. Run the application:
 
 ```powershell
 java -cp ".;mysql-connector-j-26.10.0.jar" Main
